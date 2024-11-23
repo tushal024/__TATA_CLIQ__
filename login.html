@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .main-contain{
+            background-image: url("https://pixydrops.com/mibooz/assets/images/shapes/welcom-one-shape.png");
+            background-repeat: no-repeat;
+             background-size: cover;
+        
+        }
+        ::placeholder{
+            font-size: 10px;
+        }
+        #move{
+            animation: move;
+             animation-duration: 5s;
+             animation-iteration-count: infinite;
+        }
+        @keyframes move{
+            50%{
+                transform: translatey(-50px);
+            }
+           
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="section1 flex justify-center border h-[730px]">
+     
+    <div class="main-contain flex justify-center pt-[8%]  w-[75%] h-full bg-[#B7202A] relative">
+        <img src="https://www.tatacliq.com/src/general/components/img/group.svg" alt="" class="w-[80px] absolute top-5 left-10">
+        <!-- login -->
+        <form id="loginform" class=" w-[400px] h-[430px] shadow-lg p-5 flex flex-col  items-center rounded-lg bg-white text-center ">
+          
+            <h1 class="font-serif">LOGIN</h1>
+            <p class="text-[30px] font-bold text-[#B7202A] mt-2">Welcome to Tata CLiQ</p><br>
+            <div class="a w-full mt-5 text-left">
+                <label for=""><i class="fa-solid fa-envelope fa-xs" style="color: #c01502;"></i> Email *</label>
+                <input type="text" id="loginEmail" placeholder="Enter your Email" class="border-b h-[40px] w-full shadow-lg rounded-lg p-2 hover:border-b-2 hover:border-[#B7202A]">
+            </div>
+        <div class="a w-full mt-5 text-left">
+            <label for=""><i class="fa-solid fa-lock fa-xs" style="color: #c01502;"></i> passowrd *</label>
+            <input type="text" id="loginPassowrd" placeholder="Enter your passowrd" class="border-b h-[40px] w-full shadow-lg rounded-lg p-2 hover:border-b-2 hover:border-[#B7202A]">
+        </div>
+        <br>
+        <span class="text-[12px] text-[#B7202A]" id="notmatch"></span>
+            <button class="w-full bg-[#B7202A] text-white h-[40px] rounded-lg font-bold">submit</button>
+            
+            <p class="text-[gray] mt-2">Not registered on Tata Shop Share Smile?</p>
+            <span id="signUP" class="text-[#B7202A] text-[15px] font-bold cursor-pointer">Sign Up Here</span>
+    </form>
+
+    <!-- signUP -->
+     <form action="" id="signUPform" class=" w-[400px] h-[550px] hidden shadow-lg p-5 text-center rounded-lg bg-white ">
+        <h1 class="font-serif font-bold text-[20px]">SIGN UP</h1>
+        <p class="text-[gray] text-[12px]">New Member registeration</p>
+        <p class="text-[gray] text-[12px]"> sign up now and join Tata CLiQ for shopping</p>
+        <div class="a  w-full mt-5 text-left">
+            <label for="" class="text-[14px]"><i class="fa-solid fa-user-tie fa-xs" style="color: #c01502;"></i> First Name</label>
+            <input type="text" id="name" placeholder="Enter your First Name" class="border-b h-[40px] w-full shadow-lg rounded-lg p-2 hover:border-b-2 hover:border-[#B7202A] " >
+        </div>
+        <div class="a  w-full mt-5 text-left">
+            <label for="" class="text-[14px]"><i class="fa-solid fa-user-tie fa-xs" style="color: #c01502;"></i> Last Name</label>
+            <input type="text" id="name" placeholder="Enter your Last Name" class="border-b h-[40px] w-full shadow-lg rounded-lg p-2 hover:border-b-2 hover:border-[#B7202A] " >
+        </div>
+        <div class="a w-full mt-5 text-left">
+            <label for="" class="text-[14px]"><i class="fa-solid fa-envelope fa-xs" style="color: #c01502;"></i> Email *</label>
+            <input type="text" id="email" placeholder="Enter your Email" class="border-b h-[40px] w-full shadow-lg rounded-lg p-2 hover:border-b-2 hover:border-[#B7202A]">
+            <span id="emailText" class="text-[10px] text-[#B7202A]"></span>
+        </div>
+    <div class="a w-full mt-5 text-left">
+        <label for="" class="text-[14px]"><i class="fa-solid fa-lock fa-xs" style="color: #c01502;"></i> passowrd *</label>
+        <input type="password" id="password" placeholder="Enter your password" class="border-b h-[40px] w-full shadow-lg rounded-lg p-2 hover:border-b-2 hover:border-[#B7202A]">
+        <span id="passwordText" class="text-[10px] text-[#B7202A]"></span>
+    </div>
+    <br>
+        <button class="w-full bg-[#B7202A] text-white h-[40px] rounded-lg font-bold">signup</button>
+        
+        <p class="text-[gray] mt-2">Already a member? <span id="login" class="text-[#B7202A] text-[15px] font-bold cursor-pointer"> Login now</span></p>
+        
+</form>
+   
+    </div>
+    <div class="contain w-[25%]">
+        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/login-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--security-access-key-password-ouuu-scenes-pack-people-illustrations-2526913.png" id="move" alt="" class=" absolute right-[11%] bottom-[13%]" >
+    </div>
+</div>
+
+    
+<script src="js/login.js"></script>
+</body>
+</html>
