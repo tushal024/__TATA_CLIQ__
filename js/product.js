@@ -24,19 +24,15 @@ document.getElementById("a1").addEventListener("click",()=>{
    })
 }
 
+
 fetchdata()
 
 
 function show(arr){
     return  arr.map((el)=>{
-        return `<div>${el.type}<div>`
+        return `<div>    <img src="${el.img1}">   ${el.type}<div>`
     }).join("")
 }
-
-
-
-
-
 
 function men(arr){
     let u= arr.filter((el)=>{
@@ -46,8 +42,6 @@ function men(arr){
     document.getElementById("product").innerHTML=show(u)
     
 }
-
-
 
 function kids(arr){
     let u= arr.filter((el)=>{
