@@ -70,7 +70,7 @@ document.querySelector("#loginform").addEventListener("submit",(f)=>{
     f.preventDefault()
  
     let loginEmail=document.getElementById("loginEmail").value
-    let loginPassword=document.getElementById("loginPassword").value
+    let loginPassword=document.getElementById("loginPassowrd").value
 
     fetch('http://localhost:3000/userData').then((r)=>{
         return r.json()
@@ -83,7 +83,7 @@ document.querySelector("#loginform").addEventListener("submit",(f)=>{
          }
          });
         console.log(ans)
-      if(ans.length>0){
+      if(ans.length > 0){
          Swal.fire({
             text: "login successfule",
             icon: "success"

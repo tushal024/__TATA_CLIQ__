@@ -2,154 +2,610 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="x icon" href="title-icon/favicon-32x32.png">
+    <link rel="x icon" href="title-icon/favicon.ico">
+    <link rel="x icon" href="title-icon/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>product</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <!-- tailwind-css..................... -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- jquery.............. -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+  <!-- bootstrap - css............................... -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- bootstrap - js........................ -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- remix-icon............................ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css"
+    integrity="sha512-T7lIYojLrqj7eBrV1NvUSZplDBi8mFyIEGFGdox8Bic92Col3GVrscbJkL37AJoDmF2iAh81fRpO4XZukI6kbA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- font-awesome............................ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- google-font.................... -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+
+<style>
+  .mySlides {display:none;}
+
+input[type="checkbox"] {
+  appearance: none; 
+  width: 20px;
+  height: 20px;
+  border: 2px solid #aaa9a9;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  margin: 4px;
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+input[type="checkbox"]:checked {
+  background-color: rgb(183, 1, 1); 
+  border-color: rgb(243, 2, 2);
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+select{
+  outline: none;
+}
+
+</style>
 </head>
 <body>
-    
-    <div class="w-[95%] h-[80px]">
-        <h1 class="font-bold text-2xl leading-[80px] flex justify-center">Ethnic Wear-shop ALL</h1>
-    </div>
-<div class="w-[95%] h-[80px] flex justify-between">
-    <div class="w-[10%] h-[80px] ">
-        <div class="w-[55%] h-[30px] bg-gray-200 flex justify-center mt-5 rounded-full items-center text-[15px]" >Biba
-            <i class="fa-solid fa-xmark"></i>
-        </div>
-    </div>
-    <div class="w-[10%] h-[80px]">
-        <div class="w-[70%] h-[30px] bg-gray-200 flex justify-center mt-5 rounded-full items-center text-[15px]">30% - 50% 
-            <i class="fa-solid fa-xmark"></i>
-        </div>
-    </div>
-    <div class="w-[10%] h-[80px]">
-        <div class="w-[70%] h-[30px] bg-gray-200 flex justify-center mt-5 rounded-full items-center text-[15px]">50% - 70%
-            <i class="fa-solid fa-xmark"></i>
-        </div>
-    </div>
-    <div class="w-[30%] h-[80px] ms-[80px]">
-        <div class="w-[60%] h-[40px]  flex justify-center mt-5 border">
-            <p class="mt-2 ">sort by: Popularity <i class="fa-solid fa-sliders"></i></p>
-        </div>
-    </div>
-    <div class="w-[10%] h-[80px] ">
-        <img src="images/list.svg" alt="" style="margin-top: 25px;">
-    </div>
-</div>
-<!-- slidebar -->
-    <div class="w-[95%] h-[200vh] flex  flex justify-evenly">
-        <div class="w-[25%] h-[200vh]">
-       <div class=" h-[auto] ">
-        <p class="ms-5">Home>Biba</p>
-       </div>
-       <div class="w-[90%] h-[195vh] border border-1 rounded-md">
-        <div class="w-[100%] h-[50px] boder  flex justify-between">
-            <h1 class="font-bold text-[15px] mt-3">Filters</h1>
-            <h2 class="font-bold 0 mt-3">clear All</h2>
-        </div>
-        <div class="w-[100%] h-[80px] boder border-1 ">
-            <h5 class="text-[15px] font-medium mt-2">Department</h5>
-            <h2 class="text-[15px] ms-3 mt-2">Women's clothing</h2>
-        </div>
-        <div class="w-[100%] h-[80px] boder border-1 ">
-            <h5 class="text-[15px] font-medium mt-2">Category</h5>
-            <h2 class="text-[15px] ms-3 mt-2">Etnic Wear<i class="fa-solid fa-xmark"></i></h2>
-        </div>
-        <div class="w-[100%] h-[370px] boder border-1">
-            <h5 class="text-[15px] font-medium h-[50px] mt-5 ">Product Type</h5>
-            <div class="flex justify-around h-[50px] ">
-        <input type="radio" class="text-[50px] w-[20px] h-[20px] mt-4"><span>Kurtis & Kurtas</span><span class="m-0 leading-[50px]">448</span>
-        </div>
-        <div class="flex justify-around h-[50px] ">
-            <input type="radio" class="text-[50px] w-[20px] h-[20px] mt-4"><span>suits</span><span class="m-0 leading-[50px]">407</span>
-            </div>
-            <div class="flex justify-around h-[50px] ">
-                <input type="radio" class="text-[50px] w-[20px] h-[20px] mt-4"><span>Saress and lenhange sets</span><span class="m-0 leading-[50px]">7</span>
-                </div>
-                <div class="flex justify-around h-[50px] ">
-                    <input type="radio" class="text-[50px] w-[20px] h-[20px] mt-4"><span> Bottoms</span><span class="m-0 leading-[50px]">279</span>
-                    </div>
-                     <div class="flex justify-around h-[50px] ">
-                        <input type="radio" class="text-[50px] w-[20px] h-[20px] mt-4"><span>Ethnic Dresses</span><span class="m-0 leading-[50px]">1</span>
-                        </div>
-                        <div class="flex justify-around h-[50px] ">
-                            <input type="radio" class="text-[50px] w-[20px] h-[20px] mt-4"><span>Lehenga sets</span><span class="m-0 leading-[50px]">1</span>
-                            </div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion with Tailwind CSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <!-- header........... -->
 
-                        <div class="width-[100%] h-[50px]  text-[15px] leading-[50px]">
-                            <h4 class="flex justify-between ms-2">Brand<i class="fa-solid fa-plus m-0 leading-[50px]"></i></h4>
-                        </div>
-                        <div class="width-[100%] h-[50px]  text-[15px]">
-                            <h4 class="flex justify-between ms-2">Size<i class="fa-solid fa-plus m-0 leading-[50px]"></i></h4>
-                        </div>
-                        <div class="width-[100%] h-[50px]  text-[15px]">
-                            <h4 class="flex justify-between ms-2">Fabric Family<i class="fa-solid fa-plus m-0 leading-[50px]"></i></h4>
-                        </div> 
-                         <div class="width-[100%] h-[50px] text-[15px]">
-                            <h4 class="flex justify-between ms-2">colour<i class="fa-solid fa-plus m-0 leading-[50px]"></i> </h4>
-                        </div>
-                        <div class="width-[100%] h-[50px]  text-[15px]">
-                            <h4 class="flex justify-between ms-2">Price<i class="fa-solid fa-plus m-0 leading-[50px]"></i> </h4>
-                        </div>
-                        <div class="width-[100%] h-[50px]  text-[15px]">
-                            <h4 class="flex justify-between ms-2">collections<i class="fa-solid fa-plus m-0 leading-[50px]"></i> </h4>
-                        </div>
-                        <div class="width-[100%] h-[50px]   text-[15px]">
-                            <h4 class="flex justify-between ms-2">Type<i class="fa-solid fa-plus m-0 leading-[50px]"></i> </h4>
-                        </div>
-                        <div class="width-[100%] h-[50px]  text-[15px]">
-                            <h4 class="flex justify-between ms-2">Discount<i class="fa-solid fa-plus m-0 leading-[50px]"></i> </h4>
-                        </div>
-                        <div class="width-[100%] h-[50px]   text-[15px]">
-                            <h4 class="flex justify-between ms-2">sleeve<i class="fa-solid fa-plus m-0 leading-[50px]"></i> </h4>
-                        </div>
-                        <div class="width-[100%] h-[50px]   text-[15px]">
-                            <h4 class="flex justify-between ms-2">Dress shape<i class="fa-solid fa-plus m-0 leading-[50px]"></i> </h4>
-                        </div> 
-                        <div class="width-[100%] h-[50px]   text-[16px]">
-                            <h4 class="flex justify-between ms-2">Length<i class="fa-solid fa-plus m-0 leading-[50px]"></i> </h4>
-                        </div>
-                        <div class="width-[100%] h-[50px]   text-[15px]">
-                            <h4 class="flex justify-between ms-2">Pattern<i class="fa-solid fa-plus m-0 leading-[50px]"></i> </h4>
-                        </div>
-                        <div class="width-[100%] h-[50px]   text-[15px]">
-                            <h4 class="flex justify-between ms-2">Collar<i class="fa-solid fa-plus m-0 leading-[50px]"></i> </h4>
-                        </div>
-                        <div class="width-[100%] h-[50px]   text-[15px]">
-                            <h4 class="flex justify-between ms-2">Fit<i class="fa-solid fa-plus m-0 leading-[50px]"></i> </h4>
-                        </div>
-                        <div class="width-[100%] h-[50px]  text-[15px]">
-                            <h4 class="flex justify-between ms-2">Pocket<i class="fa-solid fa-plus m-0 leading-[50px]"></i> </h4>
-                        </div>
-                        <div class="width-[100%] h-[50px]    text-[15px]">
-                            <h4 class="flex justify-between ms-2">Occasion<i class="fa-solid fa-plus m-0 leading-[50px]"></i> </h4>
-                        </div>
-                        <div class="width-[100%] h-[50px] text-[15px]">
-                            <h4 class="flex justify-between ms-2">All Discount<i class="fa-solid fa-plus m-0 leading-[50px]"></i> </h4>
-                        </div>
-        </div>
-       </div>
+ <header class="w-[100%] h-[110px]  flex justify-center items-center position sticky top-0 left-0" style="z-index: 1;">
+  <!-- logo........ -->
+  <div class="w-[25%] h-[100%]  hidden sm:flex justify-center items-center bg-[#212121]">
+    <a href="index.html">
+      <div class="logo"><img src="Assets/Logo.svg" alt="" class="xl:w-[85px]"></div>
+    </a>
+  </div>
 
+  <!-- navbar................ -->
+  <div class=" w-[100%]  sm:w-[75%] h-[100%] flex flex-wrap justify-center items-center ">
+
+      <!-- nav-1.. -->
+      <div class="bg-[#000000] w-[100%] h-[50px]  flex justify-around items-center"> 
+          <div class="w-[40%] flex justify-center items-center sm:hidden">
+         <img src="Assets/Logo.svg"   class="sm:hidden w-[]"  alt="">
+      </div>
+
+      <div class="w-[25%] h-[100%] sm:flex justify-center items-center hidden  ">
+        <a href="" class="text-[white] hover:text-gray-400">Tata CLiQ Luxury</a>
+      </div>
+
+      <div class="w-[55%] h-[100%]  flex justify-evenly items-center">
+
+
+        <a href="" class="text-[white] hover:text-gray-400 flex  flex-col justify-center items-center"><i class="ri-money-rupee-circle-line   text-[20px]  sm:text-[18px]"></i>
+      <span class="hidden  text-[14px]  xl:block">    CLiQ Cash        </span> </a>
+        <a href="" class="text-[white] hover:text-gray-400     flex  flex-col justify-center items-center"><i class="ri-gift-line   text-[20px]  sm:text-[18px]"></i> 
+      <span class="hidden  text-[14px]  xl:block">    Gift Card     </span> </a>
+        <a href="" class="text-[white] hover:text-gray-400   flex  flex-col justify-center items-center"><i class="ri-empathize-line    text-[20px] tsm:ext-[18px]"></i> 
+      <span class="hidden  text-[14px]  xl:block">    CLiq
+          Care     </span> </a>
+        <a href="" class="text-[white] hover:text-gray-400   flex  flex-col justify-center items-center"><i class="ri-map-pin-user-line    text-[20px] tsm:ext-[18px]"></i> 
+      <span class="hidden  text-[14px]  xl:block">    Track
+          Orders     </span> </a>
+        <a href="login.html" class="text-[white] hover:text-gray-400   flex  flex-col justify-center items-center"><i class="ri-login-box-line    text-[20px] tsm:ext-[18px]"></i>
+          <span class="hidden  text-[14px]  xl:block">    Sign in /
+          Sign Up     </span> </a>
+
+
+      </div>
+    </div> 
+
+
+    <!-- nav-2......... -->
+    <div class="bg-[#212121] w-[100%] h-[60px] flex justify-evenly items-center">
+
+      <div class="dropdown">
+        <button class="btn btn-[#212121] dropdown-toggle" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false" style="color: white;">
+          Categories
+        </button>
+
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item active" href="product.html">Men's Fashion</a></li>
+          <li><a class="dropdown-item" href="product.html">Women's Fashion</a></li>
+          <li><a class="dropdown-item" href="product.html">Kid's Fashion</a></li>
+          <li><a class="dropdown-item" href="#">Accessories</a></li>
+        </ul>
+      </div>
+
+      <!-- .................. -->
+      <div class="dropdown">
+        <button class="btn btn-[#212121] dropdown-toggle" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false" style="color: white;">
+          Brands
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item active" href="#">Puma</a></li>
+          <li><a class="dropdown-item" href="#">Levi's</a></li>
+          <li><a class="dropdown-item" href="#">Adidas</a></li>
+          <li><a class="dropdown-item" href="#">Pantaloons</a></li>
+        </ul>
+      </div>
+
+      <!--............... -->
+      <div class="input-group flex-nowrap w-[55%] lg:flex  hidden">
+        <span class="input-group-text bg-[#4A4A4A]" id="addon-wrapping"><i
+            class="ri-search-line text-white-50"></i></span>
+        <input type="text" class="form-control bg-[#4A4A4A] text-white-50" placeholder="Search for Products"
+          aria-label="Username" aria-describedby="addon-wrapping">
+      </div>
+
+      <!-- .............. -->
+      <a href="cart.html"><i class="ri-handbag-line xl:text-[25px] text-[white] md:me-[10px]   text-[20px]   md:text-[16px]  "></i></a>
+      <a href="like.html"><i class="ri-heart-3-line xl:text-[25px] text-[white] text-[20px]   md:text-[16px] "></i></a>
+
+    </div>
+
+
+
+
+  </div>
+
+</header>
+  <!-- maim -->
+  <div class="main m-[auto] w-[95%]">
+    <div class="hedline text-center p-2">
+      <h1 class="font-bold xl:text-[2vw]">clothing Online</h1>
+      <p class="text-[12px] text-[gray]">210611 Products</p>
+    </div>
+  
+    <div class="short flex justify-end items-center p-3 ">
+      <i class="fa-solid fa-bars me-4 absolute left-5 xl:hidden" id="aside"></i>
+      <div class="border p-2 rounded-lg flex w-[95%] sm:w-[60%] xl:w-[20%]">
+        <span class="text-[gray]">Sort by : </span>
+        <span>  <select name="" id="opt" class="xl:w-[190px]">
+          <option value="" >populary</option>
+          <option value="lh">Price Low to High</option>
+          <option value="hl">Price High to Low </option>
+          <option value="na">New Arrivals</option>
+          <option value="d">Discounts</option>
+        </select></span>
+      </div>
+      <img src="https://www.tatacliq.com/src/plp/components/img/list.svg" alt="" class="mx-5 hidden lg:block">
+    </div>
+    <div class="pro flex justify-between p-2">
+
+      <div class="border W-[90%] sm:w-[70%] xl:w-[22%] absolute xl:static z-40 xl:z-0 bg-white rounded-lg p-3 hidden lg:block"  id="menu">
+        <div class="border-b p-2 py-4">
+          <h1 class="font-bold text-[22px] flex justify-between">Filters <span class="text-[#DA1C5C] text-[14px]">Clear All</span></h1>
         </div>
-        <div class="w-[75%] h-[200vh] grid grid-cols-4 gap-4">
-          <div class="border  h-[480px]">
-            <div id="img" class=" h-[68%] p-2 flex justify-center">
-              <img src="https://img.tatacliq.com/images/i8/437Wx649H/MP000000015191660_437Wx649H_202211060047151.jpeg" alt="" class="h-full rounded-lg">
-            </div>
-            <div id="text " class="p-2">
-             <h2 class="font-bold mb-1">  U.S. Polo Assn.</h2>
-              <p class="text-[gray] text-[12px] mb-1">U.S. Polo Assn. White Regular Fit Cotton Shirt</p>
-              <p class=" text-[gray] text-[12px]">Color : black</p>
-              <span class="font-bold">₹1264</span>
-              <span class="text-[gray] line-through">₹2299</span>
-              <span class="text-[green] text-[12px] font-semibold">45% off</span>
-              <h6 class="border rounded-[210px] w-[60px] ps-2 mt-1 flex items-center">3.9 <i class="fa-solid fa-star text-[gold] text-[12px] ms-1"></i></h6>
-            </div>
+          <!-- Accordion Item 1 -->
+       <div class="border-b p-2 py-4 overflow-hidden relative ">
+        <h4 class="font-bold">Price </h4>
+        <i class="fa-solid fa-sort-down absolute right-2 top-5 text-[#BCBCBC]" id="toggle"></i> 
+      <div class=" p-2 bg-white" id="slidtoggle" >
+        <div class="a flex justify-between h-[40px]">
+          <input type="checkbox" id="fil1"> ₹0-₹500 <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">14479</span>
+        </div>
+        <div class="a flex justify-between h-[40px]">
+          <input type="checkbox" id="fil2">  ₹501-₹1000 <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">63512</span>
+        </div>
+        <div class="a flex justify-between h-[40px]">
+          <input type="checkbox" id="fil3"> ₹1001-₹2000 <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">50805</span>
+        </div>
+        <div class="a flex justify-between h-[40px]">
+          <input type="checkbox" id="fil4"> ₹2001-₹3000  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">32184</span>
+        </div>
+        <div class="a flex justify-between h-[40px]">
+          <input type="checkbox" id="fil5"> ₹3001 and Above  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">24005</span>
+        </div>
+      </div>
+    </div>
+     <!-- Accordion Item 2 -->
+     <div class="border-b p-2 py-4 overflow-hidden relative ">
+      <h4 class="font-bold">Color </h4>
+      <i class="fa-solid fa-sort-down absolute right-2 top-5 text-[#BCBCBC]" id="toggle"></i>  
+    <div class="hidden p-2 bg-white" id="slidtoggle" >
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox" id="fil6"> Aqua <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">379</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox" id="fil7">  purple <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">77</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox" id="fil8"> black  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">82</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox" id="fil9"> white  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">14</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox" id="fil10"> green  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">6279</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox" id="fil11"> brown  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">6279</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox" id="fil12"> pink  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">6279</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox" id="fil13"> blue  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">6279</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox" id="fil14"> gray  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">6279</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox"> beige <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">1069</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox"> lilac  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">2194</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox"> Libas  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">215</span>
+      </div>
+    </div>
+  </div>
+        <!-- Accordion Item 3 -->
+        <div class="border-b p-2 py-4 overflow-hidden relative ">
+          <h4 class="font-bold">Brand </h4>
+          <i class="fa-solid fa-sort-down absolute right-2 top-5 text-[#BCBCBC]" id="toggle"></i> 
+        <div class="hidden p-2 bg-white" id="slidtoggle" >
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox" id="fil15"> Spykar <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">379</span>
           </div>
-        </div>      
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox" id="fil25"> puma <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">379</span>
+          </div>
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox" id="fil16"> Jack & Jones <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">77</span>
+          </div>
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox" id="fil17"> W <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">1069</span>
+          </div>
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox" id="fil18"> skylle  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">82</span>
+          </div>
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox" id="fil19"> yufta  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">2194</span>
+          </div>
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox" id="fil20"> Libas  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">215</span>
+          </div>
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox" id="fil21"> Juniper  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">14</span>
+          </div>
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox" id="fil22"> U.S. Polo Assn.  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">6279</span>
+          </div>
         </div>
+      </div>
+         <!-- Accordion Item 4 -->
+         <div class="border-b p-2 py-4 overflow-hidden relative ">
+          <h4 class="font-bold">Category </h4>
+           <i class="fa-solid fa-sort-down absolute right-2 top-5 text-[#BCBCBC]" id="toggle"></i>
+        <div class="hidden p-2 bg-white" id="slidtoggle" >
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox"> Ethnic Wear <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">22620</span>
+          </div>
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox"> Inner & NightWear  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">12938</span>
+          </div>
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox"> Casual Wear  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">141022</span>
+          </div>
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox"> Formal Wrear  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">21579</span>
+          </div>
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox"> Sports Wear  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">14591</span>
+          </div>
+          <div class="a flex justify-between h-[40px]">
+            <input type="checkbox"> Swim & BeachWear  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">151</span>
+          </div>
+        </div>
+      </div>
+     <!-- Accordion Item 5 -->
+     <div class="border-b p-2 py-4 overflow-hidden relative ">
+      <h4 class="font-bold">Size </h4>
+      <i class="fa-solid fa-sort-down absolute right-2 top-5 text-[#BCBCBC]" id="toggle"></i> 
+    <div class="hidden p-2 bg-white" id="slidtoggle" >
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox"> XXS <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">144</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox">  XL <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">12789</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox"> S <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">87083</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox"> M  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">91661</span>
+      </div>
+      <div class="a flex justify-between h-[40px]">
+        <input type="checkbox"> L  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">8879</span>
+      </div>
+    </div>
+  </div>
+   <!-- Accordion Item 6 -->
+   <div class="border-b p-2 py-4 overflow-hidden relative ">
+    <h4 class="font-bold">Discount </h4>
+    <i class="fa-solid fa-sort-down absolute right-2 top-5 text-[#BCBCBC]" id="toggle"></i> 
+  <div class="hidden p-2 bg-white" id="slidtoggle" >
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> Upto 10% <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">6124</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> 10% - 30% <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">30927</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> 30% - 50% <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">54678</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> 50% - 70%  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">79046</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> 70% and Above  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">11114</span>
+    </div>
+  </div>
+</div>
+  <!-- Accordion Item 7 -->
+  <div class="border-b p-2 py-4 overflow-hidden relative ">
+    <h4 class="font-bold">Sleeve </h4>
+    <i class="fa-solid fa-sort-down absolute right-2 top-5 text-[#BCBCBC]" id="toggle"></i> 
+  <div class="hidden p-2 bg-white" id="slidtoggle" >
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> 3/4th sleeves <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">6124</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> Full sleeves <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">927</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> Harf sleeves <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">5478</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> Cup sleeves  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">7904</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> Reglan  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">114</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> Short sleeves <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">13414</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> sleeveless <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">7811</span>
+    </div>
+  </div>
+</div>
+   <!-- Accordion Item 8 -->
+  <div class="border-b p-2 py-4 overflow-hidden relative ">
+    <h4 class="font-bold">Type </h4>
+    <i class="fa-solid fa-sort-down absolute right-2 top-5 text-[#BCBCBC]" id="toggle"></i> 
+  <div class="hidden p-2 bg-white" id="slidtoggle" >
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> T-shirt <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">6174</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> Kurta <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">527</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> jeans <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">5478</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> Shirts  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">79043</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> Shorts  <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">1214</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> Dress <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">13014</span>
+    </div>
+    <div class="a flex justify-between h-[40px]">
+      <input type="checkbox"> jumshourt <span class="text-[#cbcbcb] font-medium text-[13px] ms-[auto]">7811</span>
+    </div>
+  </div>
+</div>
+      </div>
+
+
+      <div class="products w-full xl:w-[77%] h-[100vh] overflow-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="product">
+      
+      </div>
+    </div>
+  </div>
+
+    <!-- footer....................... -->
+    <footer class="w-[100%] h-[auto] xl:flex xl:flex-wrap xl:justify-center  xl:pt-[2%] xl:pb-[2%] flex flex-wrap justify-center items-center">
+
+
+      <div class="w-[100%] h-[auto] flex  justify-center items-center">
+        <img src="Assets/trustFrame.png" alt="">
+      </div>
+  
+      <div class="w-[100%] h-[auto] flex justify-center items-center">
+        <img src="Assets/footer-Frame.svg" alt="">
+      </div>
+  
+      <!-- ............................... -->
+  
+      <div class="xl:w-[90%] w-[95%] h-[auto] lg:flex lg:flex-wrap lg:justify-items-center lg:grid lg:grid-cols-4   xl:flex xl:justify-items-center xl:grid xl:grid-cols-4 lg:mt-[5%] xl:mt-[5%]">
+  
+        <div class="h-[auto] mt-[7%] lg:mt-[0%] xl:mt-[0%]">
+          <h5 style="font-weight: 700;">Tata MarketPlace</h5><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> About Us</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Careers</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Sell With Us</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Terms of Use</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Privacy Policy</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Affiliates</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Sitemap</a>
+        </div>
+  
+        <div class="h-[auto] mt-[7%] lg:mt-[0%] xl:mt-[0%]">
+          <h5 style="font-weight: 700;">Customer Service</h5><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Shopping</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Offers & Promotions</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Payments</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Cancellation</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Returns & Refunds</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> CliQ And PiQ</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Return to Store</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Contact Us</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Replacement Policy</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> Electronics Refunds Policy</a><br><br>
+  
+  
+  
+        </div>
+  
+        <div class="h-[auto] mt-[7%] lg:mt-[0%] xl:mt-[0%]">
+          <h5 style="font-weight: 700;">My Tata CliQ</h5><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> My Account</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> My Orders</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> My Shopping Bag</a><br><br>
+          <a href=""><i class="ri-arrow-right-s-fill"></i> My Wishlist</a>
+  
+        </div>
+  
+        <div class=" h-[auto] mt-[7%] lg:mt-[0%] xl:mt-[0%]">
+          <h5 style="font-weight: 700;">Tata CLiQ Offerings</h5><br>
+  
+          <div style="word-spacing: 3px;">
+          <a class="DesktopFooter__categoryLink" href="/watches-men/c-msh1500">Watches for Men</a> <span
+            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            href="/campus/c-mbh13b10665/page-1">Campus Shoes</a> <span
+            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            href="/men-sandals-floaters/c-msh1311127">Sandals for Men</a> <span
+            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            href="/men-sneakers/c-msh1311115">Sneakers for Men</a> <span
+            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            href="/reebok/c-mbh13a00099">Reebok Shoes</a> <span class="DesktopFooter__categoryLinkDivider">|</span> <a
+            class="DesktopFooter__categoryLink" href="/womens-clothing-ethnic-wear-kurtis-kurtas/c-msh1012100">Cotton
+            Kurtis</a> <span class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            href="/woodland/c-mbh13f00086">Woodland Shoes</a> <span class="DesktopFooter__categoryLinkDivider">|</span> <a
+            class="DesktopFooter__categoryLink"
+            href="/womens-clothing-western-wear-jumpsuits/c-msh1016108">Jumpsuits</a> <span
+            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            href="/allen-solly/c-mbh11a00023">Allen Solly</a> <span class="DesktopFooter__categoryLinkDivider">|</span> <a
+            class="DesktopFooter__categoryLink" href="/sparx/c-mbh13f00116">Sparx Shoes</a> <span
+            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            href="/jewellery-gold-rings/c-msh2012111">Gold Rings</a> <span
+            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            href="/men-formal/c-msh1311112">Formal Shoes for Men</a> <span
+            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            href="/men-sports-shoes/c-msh1311128">Sports Shoes for Men</a> <span
+            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            href="/accessories-mens-bags-wallets/c-msh1604000">Wallets for Men</a> <span
+            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            href="/watches-women/c-msh1501">Ladies Watches</a> <span class="DesktopFooter__categoryLinkDivider">|</span> <a
+            class="DesktopFooter__categoryLink" href="/accessories-mens-bags-luggage-trolley/c-msh1604007">Trolley
+          </div>
+        </div>
+  
+  
+      </div>
+  
+      <!-- ......................-->
+      <div class="w-[100%] h-[auto] bg-[#F9F9F9] rounded-3 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-3 xl:gap-5 pt-[3%] pb-[3%] ps-[5%] pe-[5%] mt-[3%]">
+          <div class="w-[330px]  h-[50px] flex justify-center items-center">
+              Download App &nbsp;<img src="Assets/android.png" alt=""> &nbsp;<img src="Assets/apple.png" alt="">
+          </div>
+  
+          <div class="w-[330px]  h-[50px] flex justify-evenly items-center"  >
+                <img src="Assets/facebook.png" alt="">
+                <img src="Assets/twitter.png" alt="" width="22px">
+                <img src="Assets/insta.png" alt="">
+                <img src="Assets/youtube.png" alt="" width="30px">
+                <img src="Assets/linkedin.png" alt="">
+          </div>
+  
+          <div class="w-[330px]  h-[50px] flex items-center justify-center">
+            <p class="">Tata CLiQ | All rights reserved</p> 
+          </div>
+      </div>
+  
+      <br>
+      <!-- .................... -->
+       <div class="w-[100%] h-[auto] flex justify-center items-center">
+            ~ &nbsp;<span class="xl:text-[20px] text-[13px] sm:text-[18px]">&#169;</span>&nbsp; <span class="xl:text-[17  px] text-[13px] sm:text-[17px]"> Created by - Tushal | Unnati | Misti | Chintan </span>&nbsp; ~    
+      </div>
+  
+    </footer>
+ 
+  <script src="accordion.js"></script>
 </body>
+</html>
+
+</body>
+<script src="js/product.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+
+<script>
+    // accordion.js
+
+document.querySelectorAll("#toggle").forEach((button) => {
+  button.addEventListener("click", () => {
+    const content = button.nextElementSibling;
+
+
+    // Toggle visibility
+    if (content.classList.contains("hidden")) {
+      // Close other open accordions (optional)
+      document.querySelectorAll("#slidtoggle").forEach((item) => {
+        item.classList.add("hidden");
+      });
+
+      content.classList.remove("hidden");
+    } else {
+      content.classList.add("hidden");
+    }
+  });
+});
+
+
+// asideToggle
+document.getElementById('aside').addEventListener('click', () => {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+});
+
+</script>
 
 </html>
