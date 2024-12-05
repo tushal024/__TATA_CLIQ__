@@ -1,22 +1,59 @@
 let url= new URLSearchParams(window.location.search)
 let id= url.get("id")
-console.log(id);
-
+let oo=0
 
 function fetchdata(){
-    fetch(`http://localhost:3000/products/${id}`)
+    fetch(`https://render-js03-tatacliq.onrender.com/products/${id}`)
     
     .then((r)=>{
      return r.json();
     })
     .then((res)=>{
     document.getElementById("container").innerHTML=show(res)
-    // add(res)
- document.getElementById("add").addEventListener("click",()=>{
-  add(res)
- })
- 
 
+         if(size1("s_b_1","s_b_2","s_b_3","s_b_4","s_b_5","s_b_6","s_b_7")  ==true  ){
+     add(res)
+    }
+  
+    else if(size1("s_b_2","s_b_1","s_b_3","s_b_4","s_b_5","s_b_6","s_b_7")  ==true  ){
+      add(res)
+
+    }
+    else if(size1("s_b_3","s_b_1","s_b_2","s_b_4","s_b_5","s_b_6","s_b_7")  ==true  ){
+      add(res)
+
+    }
+    else if(size1("s_b_4","s_b_1","s_b_3","s_b_2","s_b_5","s_b_6","s_b_7")  ==true  ){
+      add(res)
+
+    }
+    else if(size1("s_b_5","s_b_1","s_b_3","s_b_4","s_b_2","s_b_6","s_b_7")  ==true  ){
+      add(res)
+
+    }
+    else if(size1("s_b_6","s_b_1","s_b_3","s_b_4","s_b_5","s_b_2","s_b_7")  ==true  ){
+      add(res)
+
+    }
+    else if(size1("s_b_7","s_b_1","s_b_3","s_b_4","s_b_5","s_b_6","s_b_2")  ==true  ){
+      add(res)
+
+    }
+   
+
+      document.getElementById("add").addEventListener("click",()=>{
+
+        if(oo==0){
+
+          alert("Plz Select Your Size")
+        }
+
+        else{
+
+          add(res)
+          
+        }
+            })
     })
     .catch((er)=>{
      console.log(er);
@@ -31,14 +68,14 @@ function fetchdata(){
 function show(el){
     return `
      
-    <div class="w-[87%]  xl:flex  m-[auto]">
-        <div class="w-full xl:w-[50%] h-[100vh]">
+    <div class="w-[87%]  flex  m-[auto]">
+        <div class="w-[50%] h-[100vh]">
             <div class="w-[100%] h-[400px]">
                 <div class="w-[100%] h-[400px] flex justify-evenly">
                     <div class="w-[40%] h-[370px]  rounded-2xl">
                         <img src="${el.img1}" alt="" id="bhi">
                         <img src="" alt="" id="mh">
-                        <p id="gh" class="p-2">${el.off}% off</p>
+                        <p id="gh">51% off</p>
                     </div>
                     <div class="w-[40%] h-[370px]  rounded-2xl border" >
                         <img src="${el.img2}" alt="" id="bhi">
@@ -63,18 +100,18 @@ function show(el){
         </div>
 
         <!--  -->
-        <div class="w-full xl:w-[50%] p-1">
+        <div class="w-[50%]   p-1 ">
             <!-- home -->
-            <div class="w-[100%] xl:h-[45px] leading-[40px]">
+            <div class="w-[100%] h-[45px] leading-[40px]">
                 <p class="text-[13px] text-slate-500">Home > Women's cl..> Ethnic Wear > Suits > biba off White...</p>
             </div>
 
-            <div class="lg:w-[45%] leading-[30px] bg-[#FDF4F7] rounded-full ps-2">
-                <i class="fa-regular fa-heart"id="bv"></i><span class="text-slate-500 text-[10px] sm:text-[14px]">
+            <div class="w-[45%] leading-[30px] bg-[#FDF4F7] rounded-full ps-2">
+                <i class="fa-regular fa-heart"id="bv"></i><span class="text-slate-500 text-[14px]">
                  Popular :: Recently wishlisted 155 times</span>
             </div>
 <!-- popular -->
-            <div class="text w-[100%]">
+            <div class="text w-[100%] ">
                 <p class="text-[20px] font-bold leading-[40px]">${el.brand}</p>
                 <p class="text-[14px] text-slate-500 ">${el.dis}</p>
                 <p class="text-[15px] font-bold mt-2">$${el.price} <span class="text-[gray] line-through">MRP:$${el.mrp_price}</span>
@@ -93,13 +130,13 @@ function show(el){
             <!-- get -->
             <div class="w-[100%] p-2 mt-3">
                 <p class="mb-2 font-bold">Select Size</p>
-                <button class="border border-black text-[gray] rounded-lg w-[40px] h-[40px] ms-1">XS</button>
-                <button class="border border-black text-[gray] rounded-lg w-[40px] h-[40px] ms-1">S</button>
-                <button class="border border-black text-[gray] rounded-lg w-[40px] h-[40px] ms-1">M</button>
-                <button class="border border-black text-[gray] rounded-lg w-[40px] h-[40px] ms-1">L</button>
-                <button class="border border-black text-[gray] rounded-lg w-[40px] h-[40px] ms-1">XL</button>
-                <button class="border border-black text-[gray] rounded-lg w-[40px] h-[40px] ms-1">XXL</button>
-                <button class="border border-black text-[gray] rounded-lg w-[40px] h-[40px] ms-1">3XL</button>
+                <button class="border border-black text-[gray] rounded-lg w-[40px] h-[40px] ms-1"   id="s_b_1"     >XS</button>
+                <button class="border border-black text-[gray] rounded-lg w-[40px] h-[40px] ms-1"    id="s_b_2"  >S</button>
+                <button class="border border-black text-[gray] rounded-lg w-[40px] h-[40px] ms-1"    id="s_b_3"  >M</button>
+                <button class="border border-black text-[gray] rounded-lg w-[40px] h-[40px] ms-1"    id="s_b_4"  >L</button>
+                <button class="border border-black text-[gray] rounded-lg w-[40px] h-[40px] ms-1"    id="s_b_5"  >XL</button>
+                <button class="border border-black text-[gray] rounded-lg w-[40px] h-[40px] ms-1"    id="s_b_6"  >XXL</button>
+                <button class="border border-black text-[gray] rounded-lg w-[40px] h-[40px] ms-1"    id="s_b_7"  >3XL</button>
                 <p class="pt-4 text-[gray] w-[80%]">Please check size chart table to know the exact size to be ordered
                     88% Rayon 12% Flax, Dry clean</p>
             </div>
@@ -116,7 +153,7 @@ function show(el){
           </div>
     
 
-          <div class="w-[100%] flex p-2 bg-white shadow-lg">
+          <div class="w-[100%] flex p-2  bottom-1 bg-white">
            <button class="border rounded-lg w-[50px] h-[50px] flex justify-center items-center"><img src="https://www.tatacliq.com/src/pdp/components/img/new-share-icon.svg" alt=""></button>
            <button class="border rounded-lg w-[50px] h-[50px] ms-4 flex justify-center items-center"><img src="https://www.tatacliq.com/src/general/components/img/WL1.svg" alt=""></button>
            <button class="border border-[#DA1C5C] rounded-lg text-[#DA1C5C] p-2 w-[200px] ms-4 h-[50px]">Buy Now</button>
@@ -130,7 +167,39 @@ function show(el){
 
 
 function add(res){
-  fetch(`http://localhost:3000/cart/`,{
+
+  fetch(`https://render-js03-tatacliq.onrender.com/cart?id=${res.id}`)
+  .then((r)=>{
+    return r.json();
+  })
+
+  .then((Re)=>{
+    if(Re.length>0){
+      Swal.fire({
+              
+        icon: "info",
+        html: `
+         This Product is allready in Your Cart <br>
+    
+         <a href="cart.html" class="font-[400]  text-[blue]   "  autofocus> 
+        
+        <span  class="underline ">  Go To Cart       <i class="fa-solid fa-truck-fast ms-[10px] pb-[3px]"></i>   </span>
+     
+          </a>
+         
+        `,
+        showCloseButton: true,
+        confirmButtonText: `
+          <i class="fa fa-thumbs-up"></i> OK!
+        `,
+       
+      });
+    }
+
+    else{
+
+        
+  fetch(`https://render-js03-tatacliq.onrender.com/cart/`,{
     method:"POST",
     headers:{
       "content-type":"application/json"
@@ -155,4 +224,26 @@ function add(res){
     text: "You clicked the button!",
     icon: "success"
   });
+      
+    }
+  })
+
+}
+
+
+function size1 (id,id1,id2,id3,id4,id5,id6){
+  
+  document.getElementById(`${id}`).addEventListener("click",()=>{
+    oo++
+    document.getElementById(`${id}`).style.backgroundColor="#DA1C5C"
+   
+    document.getElementById(`${id1}`).style.backgroundColor="white"
+    document.getElementById(`${id2}`).style.backgroundColor="white"
+    document.getElementById(`${id3}`).style.backgroundColor="white"
+    document.getElementById(`${id4}`).style.backgroundColor="white"
+    document.getElementById(`${id5}`).style.backgroundColor="white"
+     document.getElementById(`${id6}`).style.backgroundColor="white"
+  
+  })
+
 }

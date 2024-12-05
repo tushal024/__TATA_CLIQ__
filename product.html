@@ -81,6 +81,19 @@ input[type="checkbox"]:checked::after {
 select{
   outline: none;
 }
+#opt1  {
+  background-color: transparent;
+  color: white;
+
+  
+}
+
+#opt1 option{
+  
+  background-color: black;
+}
+
+
 
 </style>
 </head>
@@ -142,19 +155,26 @@ select{
     <!-- nav-2......... -->
     <div class="bg-[#212121] w-[100%] h-[60px] flex justify-evenly items-center">
 
-      <div class="dropdown">
+      <select name="dropdown-menu dropdown-menu-dark" class="" id="opt1">
+        <option value="men"> Men's Fashion </option>
+        <option value="women">Women's Fashion  </option>
+        <option value="kid">Kid's Fashion  </option>
+      </select>
+
+      <!-- <div class="dropdown">
         <button class="btn btn-[#212121] dropdown-toggle" type="button" data-bs-toggle="dropdown"
           aria-expanded="false" style="color: white;">
           Categories
         </button>
 
+       
         <ul class="dropdown-menu dropdown-menu-dark">
           <li><a class="dropdown-item active" href="product.html">Men's Fashion</a></li>
           <li><a class="dropdown-item" href="product.html">Women's Fashion</a></li>
           <li><a class="dropdown-item" href="product.html">Kid's Fashion</a></li>
           <li><a class="dropdown-item" href="#">Accessories</a></li>
         </ul>
-      </div>
+      </div> -->
 
       <!-- .................. -->
       <div class="dropdown">
@@ -179,8 +199,12 @@ select{
       </div>
 
       <!-- .............. -->
-      <a href="cart.html"><i class="ri-handbag-line xl:text-[25px] text-[white] md:me-[10px]   text-[20px]   md:text-[16px]  "></i></a>
-      <a href="like.html"><i class="ri-heart-3-line xl:text-[25px] text-[white] text-[20px]   md:text-[16px] "></i></a>
+      <a href="cart.html" class="relative"><i class="ri-handbag-line xl:text-[25px] text-[white] md:me-[10px]   text-[20px]   md:text-[16px]  "></i>
+        <p id="total" class=" h-[20px] w-[20px] bg-[red] text-white rounded-full absolute top-0 right-0 text-center font-bold"></p>
+      </a>
+      <a href="like.html" class="relative"><i class="ri-heart-3-line xl:text-[25px] text-[white] text-[20px]   md:text-[16px] "></i>
+      <p id="totallike" class=" h-[20px] w-[20px] bg-[red] text-white rounded-full absolute top-0 right-[-5px] text-center font-bold"></p></a>
+
 
     </div>
 
@@ -508,31 +532,31 @@ select{
   
           <div style="word-spacing: 3px;">
           <a class="DesktopFooter__categoryLink" href="/watches-men/c-msh1500">Watches for Men</a> <span
-            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            class="DesktopFooter_categoryLinkDivider">|</span> <a class="DesktopFooter_categoryLink"
             href="/campus/c-mbh13b10665/page-1">Campus Shoes</a> <span
-            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            class="DesktopFooter_categoryLinkDivider">|</span> <a class="DesktopFooter_categoryLink"
             href="/men-sandals-floaters/c-msh1311127">Sandals for Men</a> <span
-            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            class="DesktopFooter_categoryLinkDivider">|</span> <a class="DesktopFooter_categoryLink"
             href="/men-sneakers/c-msh1311115">Sneakers for Men</a> <span
-            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            class="DesktopFooter_categoryLinkDivider">|</span> <a class="DesktopFooter_categoryLink"
             href="/reebok/c-mbh13a00099">Reebok Shoes</a> <span class="DesktopFooter__categoryLinkDivider">|</span> <a
             class="DesktopFooter__categoryLink" href="/womens-clothing-ethnic-wear-kurtis-kurtas/c-msh1012100">Cotton
-            Kurtis</a> <span class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            Kurtis</a> <span class="DesktopFooter_categoryLinkDivider">|</span> <a class="DesktopFooter_categoryLink"
             href="/woodland/c-mbh13f00086">Woodland Shoes</a> <span class="DesktopFooter__categoryLinkDivider">|</span> <a
             class="DesktopFooter__categoryLink"
             href="/womens-clothing-western-wear-jumpsuits/c-msh1016108">Jumpsuits</a> <span
-            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            class="DesktopFooter_categoryLinkDivider">|</span> <a class="DesktopFooter_categoryLink"
             href="/allen-solly/c-mbh11a00023">Allen Solly</a> <span class="DesktopFooter__categoryLinkDivider">|</span> <a
             class="DesktopFooter__categoryLink" href="/sparx/c-mbh13f00116">Sparx Shoes</a> <span
-            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            class="DesktopFooter_categoryLinkDivider">|</span> <a class="DesktopFooter_categoryLink"
             href="/jewellery-gold-rings/c-msh2012111">Gold Rings</a> <span
-            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            class="DesktopFooter_categoryLinkDivider">|</span> <a class="DesktopFooter_categoryLink"
             href="/men-formal/c-msh1311112">Formal Shoes for Men</a> <span
-            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            class="DesktopFooter_categoryLinkDivider">|</span> <a class="DesktopFooter_categoryLink"
             href="/men-sports-shoes/c-msh1311128">Sports Shoes for Men</a> <span
-            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            class="DesktopFooter_categoryLinkDivider">|</span> <a class="DesktopFooter_categoryLink"
             href="/accessories-mens-bags-wallets/c-msh1604000">Wallets for Men</a> <span
-            class="DesktopFooter__categoryLinkDivider">|</span> <a class="DesktopFooter__categoryLink"
+            class="DesktopFooter_categoryLinkDivider">|</span> <a class="DesktopFooter_categoryLink"
             href="/watches-women/c-msh1501">Ladies Watches</a> <span class="DesktopFooter__categoryLinkDivider">|</span> <a
             class="DesktopFooter__categoryLink" href="/accessories-mens-bags-luggage-trolley/c-msh1604007">Trolley
           </div>
@@ -570,10 +594,11 @@ select{
  
   <script src="accordion.js"></script>
 </body>
-</html>
 
-</body>
+
+
 <script src="js/product.js"></script>
+<script src="js/total.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
 

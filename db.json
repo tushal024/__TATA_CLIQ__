@@ -1,42 +1,6 @@
 {
   "userData": [],
-  "likeProduct": [
-    {
-      "id": "2",
-      "img1": "https://img.tatacliq.com/images/i17//437Wx649H/MP000000022165093_437Wx649H_202405080638591.jpeg",
-      "img2": "https://img.tatacliq.com/images/i17//437Wx649H/MP000000022165093_437Wx649H_202405080639002.jpeg",
-      "img3": "https://img.tatacliq.com/images/i17//437Wx649H/MP000000022165093_437Wx649H_202405080639023.jpeg",
-      "img4": "https://img.tatacliq.com/images/i17//437Wx649H/MP000000022165093_437Wx649H_202405080638587.jpeg",
-      "img5": "https://img.tatacliq.com/images/i17//437Wx649H/MP000000022165093_437Wx649H_202405080639016.jpeg",
-      "brand": "skylle",
-      "dis": "Skylee Purple Printed Kurta Pant Set With Dupatta",
-      "price": 1199,
-      "mrp_price": 3479,
-      "off": 66,
-      "rate": 3.7,
-      "color": "purple",
-      "type": "women",
-      "quantity": 1
-    },
-    {
-      "id": "18",
-      "img1": "https://img.tatacliq.com/images/i19//437Wx649H/MP000000023579216_437Wx649H_202409080112041.jpeg",
-      "img2": "https://img.tatacliq.com/images/i19//437Wx649H/MP000000023579216_437Wx649H_202409080112002.jpeg",
-      "img3": "https://img.tatacliq.com/images/i19//437Wx649H/MP000000023579216_437Wx649H_202409080112063.jpeg",
-      "img4": "https://img.tatacliq.com/images/i19//437Wx649H/MP000000023579216_437Wx649H_202409080112034.jpeg",
-      "img5": "https://img.tatacliq.com/images/i19//437Wx649H/MP000000023579216_437Wx649H_202409080112055.jpeg",
-      "brand": "U.S. Polo Assn.",
-      "dis": "U.S. Polo Assn. Navy High Rise Jeans",
-      "price": 2034,
-      "mrp_price": 2749,
-      "off": 26,
-      "rate": 5,
-      "color": "blue",
-      "type": "women",
-      "quenty": 1,
-      "quantity": 1
-    }
-  ],
+  "likeProduct": [],
   "products": [
     {
       "id": "1",
@@ -807,23 +771,5 @@
       "type": "men"
     }
   ],
-  "cart": [
-    {
-      "id": "1",
-      "img1": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016926106_437Wx649H_202303192253421.jpeg",
-      "img2": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016926106_437Wx649H_202303192253462.jpeg",
-      "img3": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016926106_437Wx649H_202303192253433.jpeg",
-      "img4": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016926106_437Wx649H_202303192253454.jpeg",
-      "img5": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016926106_437Wx649H_202303192253475.jpeg",
-      "brand": "W",
-      "dis": "W Women Blue Floral Print Rayon Co-Ord Kurta Set With Parallel Pant",
-      "price": 1600,
-      "mrp_price": 3999,
-      "off": 60,
-      "rate": 1,
-      "color": "Aqua",
-      "type": "women",
-      "quenty": 1
-    }
-  ]
+  "cart": []
 }

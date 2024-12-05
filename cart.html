@@ -73,13 +73,13 @@
                         <p>-₹  <span id="discount"></span> </p>
                     </div>
                     <div class="t_sub flex justify-between p-2 text-[green]">
-                        <p>You will save ₹1080.00 on this order</p>
+                        <p >You will save ₹<span id="discounts"></span>  on this order</p>
                     </div>
                     <hr class="my-2">
                     <div class="t_sub flex justify-between">
                         <div class="t_sub1 font-bold"><h1>Total</h1><h1>₹  <span id="final_total"></span> </h1></div>
                         <div class="t_sub1">
-                            <button class="bg-[#DA1C5C] text-white rounded-full p-2 hover:bg-[#E1497D]">Checkout</button>
+                            <button class="bg-[#DA1C5C] text-white rounded-full p-2 hover:bg-[#E1497D]" onclick="pay()">Checkout</button>
                         </div>
                     </div>
                 </div>
@@ -95,4 +95,5 @@
     </div>
 </body>
 <script src="js/cart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

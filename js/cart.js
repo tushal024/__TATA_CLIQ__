@@ -1,5 +1,5 @@
 function fetchdata() {
-    fetch(`http://localhost:3000/cart`)
+    fetch(`https://render-js03-tatacliq.onrender.com/cart`)
         .then((r) => {
             return r.json();
         })
@@ -36,11 +36,11 @@ function show(arr) {
 
         fi_off = Math.round((el.mrp_price * el.off) / 100)
 
-        pr_discount += fi_off
+        pr_discount += fi_off * el.quenty
 
         let fi_price = Math.round(el.mrp_price - fi_off)
 
-        mr_pr_total = mr_pr_total + el.mrp_price
+        mr_pr_total = mr_pr_total + el.mrp_price * el.quenty
 
         let bag_s = mr_pr_total + 29
 
@@ -51,6 +51,8 @@ function show(arr) {
         document.getElementById("bag_sub").innerHTML = bag_s
 
         document.getElementById("discount").innerHTML = pr_discount
+        
+        document.getElementById("discounts").innerHTML = pr_discount
 
         document.getElementById("final_total").innerHTML = fainal_total
 
@@ -62,9 +64,9 @@ function show(arr) {
  </div>
  <div id="text" class="sm:w-[70%] p-1">
      <p class="mt-2 mb-2"> ${el.dis} </p>
-     <span>  ₹${fi_price} </span>
-     <span class="line-through text-[gray]">₹${el.mrp_price}</span>
-     <span class="text-[green]" id="off_pr">₹${fi_off} Off</span>
+     <span>  ₹${fi_price*el.quenty} </span>
+     <span class="line-through text-[gray]">₹${el.mrp_price*el.quenty}</span>
+     <span class="text-[green]" id="off_pr">₹${fi_off*el.quenty} Off</span>
      <p class="mt-2 mb-2">Color : ${el.color}</p>
      <p class="flex text-[13px]">
      <img src="https://www.tatacliq.com/src/general/components/img/deliveryIcon.svg" alt="" class="sm:w-[20px] me-2"> Delivery by 5 days</p>
@@ -99,7 +101,7 @@ function Addcart(id,quenty, clickbtn) {
     }
     
 
-    fetch(`http://localhost:3000/cart/${id}`, {
+    fetch(`https://render-js03-tatacliq.onrender.com/cart/${id}`, {
         method: "PATCH",
         headers : {
             'Content-Type' : "application/json"
@@ -122,7 +124,7 @@ function Addcart(id,quenty, clickbtn) {
 
 function delete1(id) {
 
-    fetch(`http://localhost:3000/cart/${id}`, {
+    fetch(`https://render-js03-tatacliq.onrender.com/cart/${id}`, {
         method: "DELETE",
         headers: {
             "content-type": "application/json"
@@ -163,6 +165,35 @@ function AddLike(product) {
         });
 }
 
+function pay(){
+    (async () => {
+        /* inputOptions can be an object or Promise */
+        const inputOptions = new Promise((resolve) => {
+          setTimeout(() => {
+            resolve({
+              "UPI": "UPI",
+              "Cart": "Cart",
+              "Cash on delary": "Cash on delary"
+            });
+          }, 1000);
+        });
+        const { value: pay } = await Swal.fire({
+          title: "Select your payment method",
+          html: '<img src="https://t3.ftcdn.net/jpg/03/93/36/70/360_F_393367013_08D1ZSSEiMul5dSVjq3FnktIiKb5MQiD.jpg" alt="Payment Methods" style="width:150px; margin:auto;">',
+         
+          input: "radio",
+          inputOptions,
+          inputValidator: (value) => {
+            if (!value) {
+              return "You need to choose something!";
+            }
+          }
+        });
+        if (pay) {
+          Swal.fire({ html: `You selected: ${pay} method for payment` });
+        }
+      })()
+}
 
  AddLike()
- AddToCart()
+//  AddToCart()

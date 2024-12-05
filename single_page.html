@@ -130,8 +130,11 @@
       </div>
 
       <!-- .............. -->
-      <a href="cart.html"><i class="ri-handbag-line xl:text-[25px] text-[white] md:me-[10px]   text-[20px]   md:text-[16px]  "></i></a>
-      <a href="like.html"><i class="ri-heart-3-line xl:text-[25px] text-[white] text-[20px]   md:text-[16px] "></i></a>
+      <a href="cart.html" class="relative"><i class="ri-handbag-line xl:text-[25px] text-[white] md:me-[10px]   text-[20px]   md:text-[16px]  "></i>
+        <p id="total" class=" h-[20px] w-[20px] bg-[red] text-white rounded-full absolute top-0 right-0 text-center font-bold"></p>
+      </a>
+      <a href="like.html" class="relative"><i class="ri-heart-3-line xl:text-[25px] text-[white] text-[20px]   md:text-[16px] "></i>
+      <p id="totallike" class=" h-[20px] w-[20px] bg-[red] text-white rounded-full absolute top-0 right-[-5px] text-center font-bold"></p></a>
 
     </div>
 
@@ -266,5 +269,6 @@
 </body>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="js/single_page.js"></script>
+<script src="js/total.js"></script>
 
 </html>

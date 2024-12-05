@@ -1,6 +1,6 @@
 
 function AddToCart(){
-    fetch(`http://localhost:3000/likeProduct`)
+    fetch(`https://render-js03-tatacliq.onrender.com/likeProduct`)
     .then((r)=>{return r.json()})
     .then((res)=>{
         // console.log(res)
@@ -86,7 +86,7 @@ function add(res) {
 
 
 function del(id){
-    fetch(`http://localhost:3000/likeProduct/${id}`,{
+    fetch(`https://render-js03-tatacliq.onrender.com/likeProduct/${id}`,{
         method :'DELETE',
     })
     .then((res)=>{
