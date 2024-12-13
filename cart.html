@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="x icon" href="title-icon/favicon-32x32.png">
+    <link rel="x icon" href="title-icon/favicon.ico">
+    <link rel="x icon" href="title-icon/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- header -->
+    <header class="h-[80px] flex justify-between items-center bg-[black] px-24">
+        <div class="logo">
+           <a href="index.html"> <img src="https://www.tatacliq.com/src/general/components/img/TCF_logo.svg" alt=""></a>
+        </div>
+        <div class="user bg-white rounded-full">
+            <img src="https://www.tatacliq.com/src/general/components/img/profile.png" alt="" class="w-[30px]">
+        </div>
+    </header>
+    <div class="main relative flex flex-col  items-center">
+        <img src="https://www.tatacliq.com/src/cart/components/img/PaymentIllustration.svg" alt="" class="absolute top-0" style="z-index: -1;">
+        <div class="title font-bold text-[30px] w-[80%] mt-4">
+            <h1>My Bag ( <span id="cart_length"></span> )</h1>
+        </div>
+
+        <div class="cartContsiner xl:flex w-[80%] justify-between mt-8 rounded-lg bg-white mb-10">
+            <div id="CartBoxmain" class="w-full xl:w-[66%]">
+                <div class="hedline w-full border rounded-lg h-[50px] bg-gradient-to-r from-white to-[#DBEDED] text-[#00666B] flex justify-center items-center text-[13px]">
+                    <img src="https://www.tatacliq.com/src/cart/components/img/Delivery.svg" alt="" class="me-2">
+                    <p>Reivew your cart summary for the final amount eligible shipping discounts. </p>
+                </div>
+
+
+                <div id="cartt">
+
+                </div>
+                
+            </div>
+            <div id="totalBill" class="w-full xl:w-[32%]">
+                <div class="t1 w-full rounded-lg p-3 border">
+                    <h1 class="font-bold mb-2">Deliver To</h1>
+                    <hr>
+                    <h2 class="mt-1">110001, Delhi</h2>
+                    <button class="border-2 border-rose-600 text-[#DA1C5C] font-bold rounded-md w-full h-[35px] mt-2 text-[10px] sm:text-[16px]"><a href="login.html">Log in to select/Add Address</a> </button>
+                </div>
+                <div class="t2 w-full border rounded-lg p-3 flex items-center mt-3">
+                    <img src="https://www.tatacliq.com/src/general/components/img/coupon.png" alt="" class="w-[20px] me-2">
+                    <h1 class=" font-bold"> Check for Coupons</h1>
+                    <i class="fa-solid fa-chevron-right ms-[auto]"></i>
+                </div>
+                <div class="t3 w-full border rounded-lg p-3 mt-3 text-[#4A4A4A] text-[10px] sm:text-[15px]">
+                    <div class="t_sub flex justify-between p-2">
+                        <p>Bag Total</p>
+                        <p>₹ <span id="t_price"></span> </p>
+                    </div>
+                    <div class="t_sub flex justify-between p-2">
+                        <p>Processing Fee</p>
+                        <p><span class="line-through text-[gray]">₹99.00</span>₹29.00</p>
+                    </div>
+                    <div class="t_sub flex justify-between p-2">
+                        <p>Bag Subtotal</p>
+                        <p>₹ <span id="bag_sub"></span>  </p>
+                    </div>
+
+<!-- <button ></button> -->
+
+                    <div class="t_sub flex justify-between p-2">
+                        <p>Product Discount(s)</p>
+                        <p>-₹  <span id="discount"></span> </p>
+                    </div>
+                    <div class="t_sub flex justify-between p-2 text-[green]">
+                        <p >You will save ₹<span id="discounts"></span>  on this order</p>
+                    </div>
+                    <hr class="my-2">
+                    <div class="t_sub flex justify-between">
+                        <div class="t_sub1 font-bold"><h1>Total</h1><h1>₹  <span id="final_total"></span> </h1></div>
+                        <div class="t_sub1">
+                            <button class="bg-[#DA1C5C] text-white rounded-full p-2 hover:bg-[#E1497D]" onclick="pay()">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="t4 w-full rounded-lg p-3 flex border mt-3">
+                    <img src="https://www.tatacliq.com/src/cart/components/img/lock.svg" alt="" class="me-2">
+                    <p>Safe and secure payments. Easy returns. 100% Authentic products.</p>
+                </div>
+                <div class="t5 w-full rounded-lg p-3 flex border mt-3">
+                    Need Help ? Contact Us | FAQ
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/cart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>

@@ -39,7 +39,7 @@ a.addEventListener("submit",(e)=>{
 }
 console.log(obj)
 
-fetch(`http://localhost:3000/userData`,
+fetch(`https://render-js03-tatacliq.onrender.com/userData`,
    {
      method: "POST",
      headers: {
@@ -70,9 +70,9 @@ document.querySelector("#loginform").addEventListener("submit",(f)=>{
     f.preventDefault()
  
     let loginEmail=document.getElementById("loginEmail").value
-    let loginPassword=document.getElementById("loginPassword").value
+    let loginPassword=document.getElementById("loginPassowrd").value
 
-    fetch('http://localhost:3000/userData').then((r)=>{
+    fetch('https://render-js03-tatacliq.onrender.com/userData').then((r)=>{
         return r.json()
     })
     .then((res)=>{
@@ -83,7 +83,7 @@ document.querySelector("#loginform").addEventListener("submit",(f)=>{
          }
          });
         console.log(ans)
-      if(ans.length>0){
+      if(ans.length > 0){
          Swal.fire({
             text: "login successfule",
             icon: "success"
